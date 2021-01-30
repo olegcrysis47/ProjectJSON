@@ -1,0 +1,28 @@
+{
+"company":[
+  {
+    "company_name": "UNIT",
+    "address":"Perm, Komsomolsky st., 42",
+    "stocks": [
+      {
+        "owner": "Notebook"
+      },
+      {
+        "owner":"Facebook"
+      }
+    ]
+  },
+  {
+    "company_name": "SUN",
+    "address":"Moscow, Leninskiy pr., 113",
+    "stocks": [
+      {
+        "owner": "Facebook"
+      },
+      {
+        "owner":"Microsoft"
+      }
+    ]
+  }
+]
+}
