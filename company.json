@@ -23,6 +23,106 @@
             "owner":"RUS-Company"
         }
 		]
-	}
+	},
+	{
+		"company_name":"SUN",
+		"address":"Moscow, Leninskiy pr., 113",
+		"phone_number":"+7-495-987-11-11",
+		"inn":"1234567890",
+		"ogrn":"123456789101",
+		"date_foundation":"15.08.2003",
+		"stocks": [
+        {
+            "code":"USD",
+            "expiration_date":"11.11.2015",
+            "owner":"Facebook"
+        },
+		{
+            "code":"USD",
+            "expiration_date":"29.06.2022",
+            "owner":"Microsoft"
+        },
+		{
+            "code":"EU",
+            "expiration_date":"12.09.2018",
+            "owner":"London LTD"
+        }
+		]
+	},
+	{
+        "company_name":"ORACLE",
+        "address":"Moscow, Kievskoe shosse, 6",
+        "phone_number":"+1-800-321-55-55",
+        "inn":"9876543210",
+        "ogrn":"9876543210222",
+        "date_foundation":"27.01.2020",
+        "stocks": [
+        {
+            "code":"RUB",
+            "expiration_date":"11.12.2021",
+            "owner":"Zavod"
+        },
+        {
+            "code":"RUB",
+            "expiration_date":"03.03.2020",
+            "owner":"Unit"
+        },
+        {
+            "code":"USD",
+            "expiration_date":"31.12.2020",
+            "owner":"Washington"
+        }
+        ]
+    },
+	{
+        "company_name":"GOOD-MAN",
+        "address":"Belgorod, Lenina st, 2",
+        "phone_number":"+2-123-123-99-99",
+        "inn":"1598753246",
+        "ogrn":"1236547895147",
+        "date_foundation":"14.09.2017",
+        "stocks": [
+          {
+            "code":"EU",
+            "expiration_date":"30.01.2022",
+            "owner":"Xerox"
+          },
+          {
+            "code":"USD",
+            "expiration_date":"15.05.2025",
+            "owner":"MSI"
+          },
+          {
+            "code":"RUB",
+            "expiration_date":"12.06.2021",
+            "owner":"Acer"
+          }
+        ]
+    },
+	{
+        "company_name":"CHRISTOPHER",
+        "address":"Vladivostok, Ermolaeva street, 1",
+        "phone_number":"+3-147-258-36-96",
+        "inn":"5858252536",
+        "ogrn":"5858252536951",
+        "date_foundation":"09.03.2012",
+        "stocks": [
+          {
+            "code":"EU",
+            "expiration_date":"02.02.2015",
+            "owner":"Acer"
+          },
+          {
+            "code":"EU",
+            "expiration_date":"05.05.2020",
+            "owner":"Java"
+          },
+          {
+            "code":"RUB",
+            "expiration_date":"31.05.2022",
+            "owner":"Community"
+          }
+        ]
+    }
 
 ]
