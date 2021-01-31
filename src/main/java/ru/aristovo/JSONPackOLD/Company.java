@@ -1,4 +1,4 @@
-package ru.aristovo.JSONPack;
+package ru.aristovo.JSONPackOLD;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,9 +1,7 @@
-package ru.aristovo.JSONPack;
+package ru.aristovo.JSONPackOLD;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ru.aristovo.JSONPack.Company;
-import ru.aristovo.JSONPack.Stocks;
 
 import java.io.File;
 import java.io.IOException;
