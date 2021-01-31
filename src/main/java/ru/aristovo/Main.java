@@ -21,7 +21,7 @@ public class Main {
         for (Company c:companyList) {
             System.out.println(c.getCompanyName() + " " + c.getDateFoundation());
             for (Stocks s: c.getStocks()) {
-                System.out.println(s.getOwner());
+                System.out.println(s.getOwner() + " " + s.getExpirationDate());
             }
         }
 
