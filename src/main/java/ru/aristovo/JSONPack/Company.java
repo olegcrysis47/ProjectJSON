@@ -1,35 +1,39 @@
 package ru.aristovo.JSONPack;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDate;
-import java.util.Date;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 
 public class Company {
 
-    private String company_name;
+    @JsonProperty("company_name")
+    private String companyName;
     private String address;
-    private LocalDate date_foundation;
+    @JsonProperty("date_foundation")
+    private LocalDate dateFoundation;
     private List<Stocks> stocks;
+
+    private static DateTimeFormatter defaultDateFormat = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
     public Company() {};
 
-    public LocalDate getDate_foundation() {
-        return date_foundation;
+    public String getDateFoundation() {
+        return dateFoundation.format(defaultDateFormat);
     }
 
-    public void setDate_foundation(LocalDate date_foundation) {
-        this.date_foundation = date_foundation;
+    public void setDateFoundation(String date) {
+        this.dateFoundation = LocalDate.parse(date, defaultDateFormat);
     }
 
-    public String getCompany_name() {
-        return company_name;
+    public String getCompanyName() {
+        return companyName;
     }
 
-    public void setCompany_name(String company_name) {
-        this.company_name = company_name;
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
     }
 
     public String getAddress() {
