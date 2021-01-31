@@ -3,6 +3,7 @@ package ru.aristovo;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ru.aristovo.JSONPack.Company;
+import ru.aristovo.JSONPack.Stocks;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +19,9 @@ public class Main {
 
         for (Company c:companyList) {
             System.out.println(c.getCompany_name());
+            for (Stocks s: c.getStocks()) {
+                System.out.println(s.getOwner());
+            }
         }
 
     }
