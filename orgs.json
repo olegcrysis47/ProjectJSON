@@ -2,6 +2,7 @@
   {
     "company_name": "UNIT",
     "address":"Perm, Komsomolsky st., 42",
+    "date_foundation":"15.08.2003",
     "stocks": [
       {
         "owner": "Notebook"
@@ -14,6 +15,7 @@
   {
     "company_name": "SUN",
     "address":"Moscow, Leninskiy pr., 113",
+    "date_foundation":"15.08.2003",
     "stocks": [
       {
         "owner": "Facebook"
