@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ru.aristovo.application.JSONpack.Company;
 import ru.aristovo.application.JSONpack.Stock;
+import ru.aristovo.application.streamWork.MethodsWorkStream;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,6 +19,12 @@ public class Main {
         List<Company> company = mapper
                 .readValue(new File("company.json"), new TypeReference<List<Company>>() {});
 
+        // тестируем метод MethodsWorkStream.viewCompany(List<Company> list)
+        System.out.println("Задача № 1. Выводим название компании и дату ее основания:");
+        MethodsWorkStream.viewCompany(company);
+        System.out.println("----------------------------------------------------------");
+
+        /*
         //Блок тестирования
         int i = 1;
         for (Company c: company) {
@@ -42,7 +49,7 @@ public class Main {
             }
             System.out.println("-----------------------------------------");
         }
-
+        */
 
     }
 
