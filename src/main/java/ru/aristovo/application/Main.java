@@ -24,6 +24,11 @@ public class Main {
         MethodsWorkStream.viewCompany(company);
         System.out.println("----------------------------------------------------------");
 
+        // тестируем метод public static void viewExpiredStock(List<Company> list)
+        System.out.println("Задача № 2. Выводим список просроченных акций на текущий день и их держателей");
+        MethodsWorkStream.viewExpiredStock(company);
+        System.out.println("----------------------------------------------------------");
+
         /*
         //Блок тестирования
         int i = 1;
