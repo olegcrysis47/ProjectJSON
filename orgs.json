@@ -5,9 +5,11 @@
     "date_foundation":"15.08.2003",
     "stocks": [
       {
+        "expiration_date":"11.11.2015",
         "owner": "Notebook"
       },
       {
+        "expiration_date":"11.11.2015",
         "owner":"Facebook"
       }
     ]
@@ -18,9 +20,11 @@
     "date_foundation":"15.08.2003",
     "stocks": [
       {
+        "expiration_date":"11.11.2015",
         "owner": "Facebook"
       },
       {
+        "expiration_date":"11.11.2015",
         "owner":"Microsoft"
       }
     ]
