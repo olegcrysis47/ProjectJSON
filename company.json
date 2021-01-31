@@ -1,0 +1,28 @@
+[
+	{
+		"company_name":"UNIT",
+		"address":"Perm, Komsomolsky st., 42",
+		"phone_number":"+7-495-123-33-33",
+		"inn":"3128123456",
+		"ogrn":"1103254016216",
+		"date_foundation":"05.02.2005",
+		"stocks": [
+        {
+            "code":"EU",
+            "expiration_date":"15.05.2021",
+            "owner":"Notebook"
+        },
+		{
+            "code":"USD",
+            "expiration_date":"16.04.2019",
+            "owner":"Facebook"
+        },
+		{
+            "code":"RUB",
+            "expiration_date":"23.09.2021",
+            "owner":"RUS-Company"
+        }
+		]
+	}
+
+]
