@@ -1,5 +1,6 @@
 package ru.aristovo;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import ru.aristovo.JSONPack.Company;
 
@@ -13,7 +14,7 @@ public class Main {
 
         ObjectMapper mapper = new ObjectMapper();
 
-        List<Company> companyList = mapper.readValue(new File("C:\\ProjectJSON\\orgs.json"), List.class);
+        List<Company> companyList = mapper.readValue(new File("orgs.json"), new TypeReference<List<Company>>(){});
 
         for (Company c:companyList) {
             System.out.println(c.getCompany_name());
