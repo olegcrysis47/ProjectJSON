@@ -29,6 +29,9 @@ public class Main {
         MethodsWorkStream.viewExpiredStock(company);
         System.out.println("----------------------------------------------------------");
 
+        MethodsWorkStream.viewStockByCode(company);
+
+
         /*
         //Блок тестирования
         int i = 1;
