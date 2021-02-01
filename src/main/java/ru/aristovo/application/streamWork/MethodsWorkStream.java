@@ -1,8 +1,12 @@
 package ru.aristovo.application.streamWork;
 
+import ru.aristovo.application.JSONpack.Code;
 import ru.aristovo.application.JSONpack.Company;
 import ru.aristovo.application.JSONpack.Stock;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -50,9 +54,24 @@ public class MethodsWorkStream {
     /*
     - На запрос пользователя в виде даты «ДД.ММ.ГГГГ», «ДД.ММ.ГГ», «ДД/ММ/ГГГГ» и «ДД/ММ/ГГ» вывести название
     и дату создания всех организаций, основанных после введенной даты;
+    */
 
+    /*
     - На запрос пользователя в виде кода валюты, например EU, USD, RUB и пр. выводить id и коды ценных бумаг,
     использующих заданную валюту.
      */
+
+    public static void viewStockByCode(List<Company> list) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String enterCode = reader.readLine();
+        reader.close();
+
+        Code code = null;
+        if (enterCode.equalsIgnoreCase("RUB")) code = Code.RUB;
+        else if (enterCode.equalsIgnoreCase("USD")) code = Code.USD;
+        else if (enterCode.equalsIgnoreCase("EU")) code = Code.EU;
+
+        list.stream().forEach((c) -> c.getStocks().stream().filter((s) -> s.getCode() == Code.EU).forEach((s) -> System.out.println(s.getOwner())));
+    }
 
 }
