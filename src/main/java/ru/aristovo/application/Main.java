@@ -29,7 +29,10 @@ public class Main {
         MethodsWorkStream.viewExpiredStock(company);
         System.out.println("----------------------------------------------------------");
 
+        // тестируем метод viewStockByCode(List<Company> list)
+        System.out.println("Задача № 4. Пользователь вводит валюту и получает список всех акций по этой валюте");
         MethodsWorkStream.viewStockByCode(company);
+        System.out.println("----------------------------------------------------------");
 
 
         /*
