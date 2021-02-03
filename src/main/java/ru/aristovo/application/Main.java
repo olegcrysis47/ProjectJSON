@@ -19,6 +19,7 @@ public class Main {
         List<Company> company = mapper
                 .readValue(new File("company.json"), new TypeReference<List<Company>>() {});
 
+
         // тестируем метод MethodsWorkStream.viewCompany(List<Company> list)
         System.out.println("Задача № 1. Выводим название компании и дату ее основания:");
         MethodsWorkStream.viewCompany(company);
@@ -29,10 +30,17 @@ public class Main {
         MethodsWorkStream.viewExpiredStock(company);
         System.out.println("----------------------------------------------------------");
 
+        // тестируем метод public static void viewCompanyByDate(List<Company> list)
+        System.out.println("Задача № 3. Выводим список компаний, основанных после введеной даты пользователем");
+        MethodsWorkStream.viewCompanyByDate(company);
+        System.out.println("----------------------------------------------------------");
+
+        /* Закомментировал для тестирования задачи 3, т.к. BufferedReader этих двух методов конфликтуют между собой.
         // тестируем метод viewStockByCode(List<Company> list)
         System.out.println("Задача № 4. Пользователь вводит валюту и получает список всех акций по этой валюте");
         MethodsWorkStream.viewStockByCode(company);
         System.out.println("----------------------------------------------------------");
+        */
 
 
         /*
