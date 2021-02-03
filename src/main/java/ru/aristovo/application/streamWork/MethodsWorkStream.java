@@ -75,6 +75,7 @@ public class MethodsWorkStream {
         LocalDate date = LocalDate.of(year, mouth, day);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
+        System.out.println("Компании которые основаны после " + date);
         list.stream()
                 .filter((c) -> LocalDate.parse(c.getDateFoundation(),formatter).isAfter(date))
                 .forEach((c) -> System.out.println(c.getCompanyName() + " " + c.getDateFoundation()));
