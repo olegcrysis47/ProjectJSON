@@ -56,6 +56,30 @@ public class MethodsWorkStream {
     и дату создания всех организаций, основанных после введенной даты;
     */
 
+    public static void viewCompanyByDate(List<Company> list) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите дату:");
+        String enterDate = reader.readLine();
+        reader.close();
+
+        String[] str = enterDate.split("\\W");
+
+        int day = Integer.parseInt(str[0]);
+        int mouth = Integer.parseInt(str[1]);
+        int year = Integer.parseInt(str[2]);;
+        if (year < 100) {
+            if (year < 70) year += 2000;
+            else if (year >= 70) year += 1900;
+        }
+
+        LocalDate date = LocalDate.of(year, mouth, day);
+        System.out.println(date);
+
+
+
+
+    }
+
     /*
     - На запрос пользователя в виде кода валюты, например EU, USD, RUB и пр. выводить id и коды ценных бумаг,
     использующих заданную валюту.
