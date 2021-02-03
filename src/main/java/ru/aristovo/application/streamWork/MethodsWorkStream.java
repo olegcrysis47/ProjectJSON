@@ -66,32 +66,20 @@ public class MethodsWorkStream {
         System.out.println("Введите код валюты акции");
         String enterCode = reader.readLine();
         reader.close();
+        Code code = null;
+
+        if (enterCode.equalsIgnoreCase("RUB")) code = Code.RUB;
+        else if (enterCode.equalsIgnoreCase("USD")) code = Code.USD;
+        else if (enterCode.equalsIgnoreCase("EU")) code = Code.EU;
 
         System.out.println("Акции по запрошенной валюте " + enterCode.toUpperCase() + ":");
-        if (enterCode.equalsIgnoreCase("RUB")) {
-            list
-                    .stream()
-                    .forEach((c) -> c.getStocks()
-                            .stream()
-                            .filter((s) -> s.getCode() == Code.RUB)
-                            .forEach((s) -> System.out.println(s.getCode() + " " + s.getOwner())));
-        }
-        else if (enterCode.equalsIgnoreCase("USD")) {
-            list
-                    .stream()
-                    .forEach((c) -> c.getStocks()
-                            .stream()
-                            .filter((s) -> s.getCode() == Code.USD)
-                            .forEach((s) -> System.out.println(s.getCode() + " " + s.getOwner())));
-        }
-        else if (enterCode.equalsIgnoreCase("EU")) {
-            list
-                    .stream()
-                    .forEach((c) -> c.getStocks()
-                            .stream()
-                            .filter((s) -> s.getCode() == Code.EU)
-                            .forEach((s) -> System.out.println(s.getCode() + " " + s.getOwner())));
-        }
+
+        Code finalCode = code; // stream не захотел принимать переменную code и сам создал эту переменную
+        list.stream()
+                .forEach((c) -> c.getStocks()
+                .stream()
+                        .filter((s) -> s.getCode().equals(finalCode))
+                        .forEach((s) -> System.out.println(s.getCode() + " " + s.getOwner())));
 
 
     }
