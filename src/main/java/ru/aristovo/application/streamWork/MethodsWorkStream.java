@@ -92,11 +92,20 @@ public class MethodsWorkStream {
         System.out.println("Введите код валюты акции");
         String enterCode = reader.readLine();
         reader.close();
+        enterCode = enterCode.toUpperCase();
         Code code = null;
 
-        if (enterCode.equalsIgnoreCase("RUB")) code = Code.RUB;
-        else if (enterCode.equalsIgnoreCase("USD")) code = Code.USD;
-        else if (enterCode.equalsIgnoreCase("EU")) code = Code.EU;
+        switch (enterCode) {
+            case "RUB":
+                code = Code.RUB;
+                break;
+            case "USD":
+                code = Code.USD;
+                break;
+            case "EU":
+                code = Code.EU;
+                break;
+        }
 
         System.out.println("Акции по запрошенной валюте " + enterCode.toUpperCase() + ":");
 
