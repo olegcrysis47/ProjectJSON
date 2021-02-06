@@ -90,30 +90,23 @@ public class MethodsWorkStream {
     public static void viewStockByCode(List<Company> list) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите код валюты акции");
-        String enterCode = reader.readLine();
+        String enterCode = reader.readLine().toUpperCase();
         reader.close();
-        enterCode = enterCode.toUpperCase();
-        Code code = null;
 
-        switch (enterCode) {
-            case "RUB":
-                code = Code.RUB;
-                break;
-            case "USD":
-                code = Code.USD;
-                break;
-            case "EU":
-                code = Code.EU;
-                break;
+        Code code;
+        try {
+            code = Code.valueOf(enterCode);
+        } catch (Exception exception) {
+            System.out.println("Некорректный код валюты!");
+            return;
         }
 
         System.out.println("Акции по запрошенной валюте " + enterCode.toUpperCase() + ":");
 
-        Code finalCode = code; // stream не захотел принимать переменную code и сам создал эту переменную
         list.stream()
                 .forEach((c) -> c.getStocks()
                 .stream()
-                        .filter((s) -> s.getCode().equals(finalCode))
+                        .filter((s) -> s.getCode().equals(code))
                         .forEach((s) -> System.out.println(s.getCode() + " " + s.getOwner())));
 
 
